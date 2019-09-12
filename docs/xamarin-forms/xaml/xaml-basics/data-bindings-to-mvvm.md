@@ -651,7 +651,7 @@ public class PageDataViewModel
 }
 ```
 
-The XAML file for `MainPage` defines a `ListBox` whose `ItemsSource` property is set to that `All` property and which contains a `TextCell` for displaying the `Title` and `Description` properties of each page:
+The XAML file for `MainPage` defines a `ListView` whose `ItemsSource` property is set to that `All` property and which contains a `TextCell` for displaying the `Title` and `Description` properties of each page:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -677,7 +677,7 @@ The pages are shown in a scrollable list:
 
 [![](data-bindings-to-mvvm-images/mainpage.png "Scrollable list of pages")](data-bindings-to-mvvm-images/mainpage-large.png#lightbox "Scrollable list of pages")
 
-The handler in the code-behind file is triggered when the user selects an item. The handler sets the `SelectedItem` property of the `ListBox` back to `null` and then instantiates the selected page and navigates to it:
+The handler in the code-behind file is triggered when the user selects an item. The handler sets the `SelectedItem` property of the `ListView` back to `null` and then instantiates the selected page and navigates to it:
 
 ```csharp
 private async void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs args)
